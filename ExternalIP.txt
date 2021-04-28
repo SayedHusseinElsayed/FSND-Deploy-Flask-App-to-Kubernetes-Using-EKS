@@ -1,0 +1,4 @@
+NAME             TYPE           CLUSTER-IP      EXTERNAL-IP                                                               PORT(S)        AGE   SELECTOR
+simple-jwt-api   LoadBalancer   10.100.135.79   a40d8675132db40a59b05afe3f8021b4-1523429753.us-west-2.elb.amazonaws.com   80:31203/TCP   54m   app=simple-jwt-api
+
+export TOKEN=`curl -d '{"email":"sayed.hussein.elsayed@gmail.com","password":"NeverForget2020"}' -H "Content-Type: application/json" -X POST a40d8675132db40a59b05afe3f8021b4-1523429753.us-west-2.elb.amazonaws.com/auth  | jq -r '.token'`
